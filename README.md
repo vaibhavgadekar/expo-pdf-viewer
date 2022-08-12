@@ -7,11 +7,9 @@
    <br/>
    <br/>
    <br/>
-   <a href="https://www.npmjs.com/package/rn-pdf-reader-js"><img alt="npm version" src="https://badge.fury.io/js/rn-pdf-reader-js.svg"/>
+   <a href="https://www.npmjs.com/package/expo-pdf-viewer"><img alt="npm version" src="https://badge.fury.io/js/expo-pdf-viewer.svg"/>
    <a href="https://www.npmjs.com/package/rn-pdf-reader-js">
-  <img alt="npm downloads" src="https://img.shields.io/npm/dm/rn-pdf-reader-js.svg"/></a>
-<a href="http://reactnative.gallery/xcarpentier/rn-pdf-reader-js"><img src="https://img.shields.io/badge/reactnative.gallery-%F0%9F%8E%AC-green.svg"/></a>
-</a>
+  <img alt="npm downloads" src="https://img.shields.io/npm/dm/expo-pdf-viewer.svg"/></a>
   <a href="#hire-an-expert"><img src="https://img.shields.io/badge/%F0%9F%92%AA-hire%20an%20expert-brightgreen"/></a>
 </p>
 
@@ -23,16 +21,15 @@
 - 👉**Install expo-file-system** on your own!
 - 👉**Install expo-constants** on your own!
 - Use it into Expo app (from expo client, Standalone app or ExpoKit app).
-- Only React-Native 0.59-0.60+ support, **Expo SDK 33-36+**
 
-[PRs are welcome...](https://github.com/xcarpentier/rn-pdf-reader-js/pulls)
+[PRs are welcome...](https://github.com/vaibhavgadekar/expo-pdf-viewer/pulls)
 
 ## Example
 
 ```tsx
 import * as React from 'react'
 import { View } from 'react-native'
-import PDFReader from 'rn-pdf-reader-js'
+import PDFReader from 'expo-pdf-viewer'
 
 export default class App extends React.Component {
   render() {
@@ -96,11 +93,3 @@ interface Props {
 - react-pdf (pdf.js)
 - WebView
 - Base64
-
-## FAQ
-
-- [Why the component doesn't render PDF?](https://github.com/xcarpentier/rn-pdf-reader-js/issues/15#issuecomment-397306743)
-
-## Hire an expert!
-
-Looking for a ReactNative freelance expert with more than 12 years experience? Contact me from my [website](https://xaviercarpentier.com)!
