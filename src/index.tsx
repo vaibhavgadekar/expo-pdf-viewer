@@ -226,7 +226,7 @@ async function urlToBlob(source: Source): Promise<Blob | undefined> {
 
 const getGoogleReaderUrl = (url: string) =>
   `https://docs.google.com/viewer?url=${url}`
-const getGoogleDriveUrl = (url: string) =>
+const getGoogleDriveUrl = (url: string | undefined) =>
   `https://drive.google.com/viewerng/viewer?embedded=true&url=${url}`
 
 const Loader = () => (
