@@ -1,0 +1,71 @@
+{
+  "name": "expo-pdf-viewer",
+  "version": "1.0.4",
+  "description": "PDF reader for Expo",
+  "main": "node_modules/expo/AppEntry.js",
+  "types": "lib/index.d.ts",
+  "author": "Xavier Carpentier <xcapetir@gmail.com> (https://xaviercarpentier.com/)",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn config:dev && expo start -c",
+    "tsc": "tsc --noEmit",
+    "bundle": "./scripts/gen_bundle_string.js",
+    "build": "yarn bundle && rm -rf lib/ && node_modules/.bin/tsc",
+    "config:dev": "json -I -f package.json -e 'this.main=\"node_modules/expo/AppEntry.js\"'",
+    "config:npm": "json -I -f package.json -e 'this.main=\"lib/index.js\"'",
+    "lint": "tslint --project .",
+    "verify": "yarn lint && yarn tsc && yarn build",
+    "prepublishOnly": "yarn verify && yarn config:npm",
+    "postpublish": "yarn config:dev",
+    "cleaning": "rm -rf node_modules && rm -f yarn.lock && yarn cache clean && yarn install && watchman watch-del-all && rm -fr $TMPDIR/react-*"
+  },
+  "keywords": [
+    "React-Native",
+    "PDF",
+    "pdfjs",
+    "reader",
+    "pdf-reader",
+    "pdf-viewer",
+    "react-pdf",
+    "expo"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xcarpentier/rn-pdf-reader-js.git"
+  },
+  "peerDependencies": {
+    "expo": ">= 33.0.x < 41.0.x",
+    "expo-constants": ">= 5.0.0 < 9.x",
+    "expo-file-system": ">= 5.0.0 < 9.x",
+    "react": "16.x",
+    "react-native": "*",
+    "react-native-webview": ">= 7.0.5 < 12.x"
+  },
+  "dependencies": {
+    "buffer": "5.1.0",
+    "csstype": "2.6.8",
+    "js-base64": "2.4.5"
+  },
+  "devDependencies": {
+    "@types/js-base64": "2.3.1",
+    "@types/react": "~18.0.0",
+    "@types/react-dom": "~18.0.0",
+    "@types/react-native": "~0.69.1",
+    "babel-preset-expo": "~9.2.0",
+    "crypto": "1.0.1",
+    "expo": "^46.0.0",
+    "expo-constants": "~13.2.3",
+    "expo-file-system": "~14.1.0",
+    "json": "^9.0.6",
+    "react": "18.0.0",
+    "react-native": "0.69.4",
+    "react-native-webview": "11.23.0",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.6.3"
+  },
+  "bugs": {
+    "url": "https://github.com/xcarpentier/rn-pdf-reader-js/issues"
+  },
+  "homepage": "https://github.com/xcarpentier/rn-pdf-reader-js#readme"
+}
